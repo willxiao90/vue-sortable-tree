@@ -1,0 +1,20 @@
+.vue-sortable-item {
+  touch-action: none;
+  user-select: none;
+}
+
+.vue-sortable-item.sortable-ghost {
+  /* opacity: 0.5; */
+}
+
+.vue-sortable-item.sortable-chosen {
+  /* color: red; */
+}
+
+.vue-sortable-item.ignore-elements {
+  /* color: gray; */
+}
+
+.vue-sortable-item.sortable-fallback {
+  /* display: none; */
+}
