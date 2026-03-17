@@ -141,13 +141,15 @@ treeRef.value?.scrollIntoView('node-id', { behavior: "smooth", block: "center" }
 
 ## 示例
 
-### 自定义树节点内容、展开/收起图标
+### 自定义树节点内容、展开/收起图标和样式
 
 ```vue
 <template>
   <SortableTree :items="items" @change="handleChange">
+    <!-- 可自定义整个树节点 -->
     <template #default="{ item, depth, isLeaf, isExpanded, toggleExpand }">
       <div class="folder-item" :style="{ paddingLeft: `${depth * 30}px` }">
+        <!-- 自定义展开/收起图标 -->
         <span
           v-if="!isLeaf"
           class="node-icon"
@@ -161,55 +163,9 @@ treeRef.value?.scrollIntoView('node-id', { behavior: "smooth", block: "center" }
           :class="{ 'is-leaf': isLeaf }"
         ></span>
 
+        <!-- 自定义树节点内容 -->
         <span class="folder-name">{{ item.label }}</span>
         <button class="delete-btn"> X </button>
-      </div>
-    </template>
-  </SortableTree>
-</template>
-
-<style scoped>
-.node-icon {
-  display: inline-flex;
-  width: 20px;
-  height: 20px;
-  margin-right: 4px;
-  justify-content: center;
-  cursor: "pointer";
-  background: url("../assets/triangle-right.svg") no-repeat center / contain;
-}
-
-.node-icon.is-expanded {
-  background-image: url("../assets/triangle-down.svg");
-}
-
-.node-icon.is-leaf {
-  background-image: none;
-}
-</style>
-```
-
-### 自定义样式
-
-```vue
-<template>
-  <SortableTree class="custom-tree" :items="items" @change="handleChange">
-    <template #default="{ item, depth, isLeaf, isExpanded, toggleExpand }">
-      <div class="folder-item" :style="{ paddingLeft: `${depth * 30}px` }">
-        <span
-          v-if="!isLeaf"
-          class="node-icon"
-          :class="{ 'is-expanded': isExpanded }"
-          @click.stop="toggleExpand"
-        >
-        </span>
-        <span
-          v-else
-          class="node-icon"
-          :class="{ 'is-leaf': isLeaf }"
-        ></span>
-
-        <span class="folder-name">{{ item.label }}</span>
       </div>
     </template>
   </SortableTree>
@@ -227,11 +183,28 @@ treeRef.value?.scrollIntoView('node-id', { behavior: "smooth", block: "center" }
   color: #2c3e50;
 }
 
+/* 展开/收起图标 */
+.node-icon {
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+  margin-right: 4px;
+  justify-content: center;
+  cursor: pointer;
+  background: url("../assets/triangle-right.svg") no-repeat center / contain;
+}
+.node-icon.is-expanded {
+  background-image: url("../assets/triangle-down.svg");
+}
+.node-icon.is-leaf {
+  background-image: none;
+}
+
 /* sortablejs 相关样式 */
-:deep(.custom-tree .vue-sortable-item.sortable-ghost) {
+:deep(.vue-sortable-item.sortable-ghost) {
   background-color: lightskyblue;
 }
-:deep(.custom-tree .vue-sortable-item.sortable-fallback) {
+:deep(.vue-sortable-item.sortable-fallback) {
   display: none;
 }
 </style>
@@ -253,3 +226,13 @@ const isDisabled = (item: any, index: number) => {
 ```
 
 更多示例见 [example\components\SortableTreeDemo.vue](example\components\SortableTreeDemo.vue)
+
+## 全局 CSS Class
+
+- jd-sortable-item
+- jd-sortable-tree-node
+- jd-sortable-tree-node-label
+- jd-sortable-tree-icon
+- jd-sortable-tree-icon-expanded
+- jd-sortable-tree-icon-collapsed
+- jd-sortable-tree-icon-leaf

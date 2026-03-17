@@ -18,3 +18,29 @@
 .vue-sortable-item.sortable-fallback {
   /* display: none; */
 }
+
+.jd-sortable-tree-node {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+}
+
+.jd-sortable-tree-icon {
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.jd-sortable-tree-icon-expanded,
+.jd-sortable-tree-icon-collapsed {
+  /* transition: all 0.2s ease; */
+}
+
+.jd-sortable-tree-icon-leaf {
+  /* font-size: 0; */
+}

@@ -106,7 +106,7 @@ const collapseNode = (id: string) => {
   height: 20px;
   margin-right: 4px;
   justify-content: center;
-  cursor: "pointer";
+  cursor: pointer;
   background: url("../assets/triangle-right.svg") no-repeat center / contain;
 }
 
@@ -129,11 +129,11 @@ const collapseNode = (id: string) => {
   flex: 1;
 }
 
-:deep(.custom-tree .vue-sortable-item.sortable-ghost) {
+:deep(.vue-sortable-item.sortable-ghost) {
   background-color: lightskyblue;
 }
 
-:deep(.custom-tree .vue-sortable-item.sortable-fallback) {
+:deep(.vue-sortable-item.sortable-fallback) {
   display: none;
 }
 </style>

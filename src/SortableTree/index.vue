@@ -211,37 +211,29 @@ defineExpose({
         :toggle-expand="() => toggleExpand(item)"
       >
         <div
+          class="jd-sortable-tree-node"
           :style="{
             paddingLeft: `${itemDepth(item, index) * props.indentationWidth}px`,
-            display: 'flex',
-            alignItems: 'center',
-            minHeight: '40px',
           }"
         >
           <span
             v-if="item.hasChildren"
-            :style="{
-              display: 'inline-flex',
-              width: '20px',
-              justifyContent: 'center',
-              cursor: 'pointer',
+            :class="{
+              'jd-sortable-tree-icon': true,
+              'jd-sortable-tree-icon-expanded': isExpanded(item.id),
+              'jd-sortable-tree-icon-collapsed': !isExpanded(item.id),
             }"
             @click.stop="toggleExpand(item)"
           >
             {{ isExpanded(item.id) ? "▼" : "▶" }}
           </span>
-          <span
-            v-else
-            :style="{
-              display: 'inline-flex',
-              justifyContent: 'center',
-              width: '20px',
-            }"
-          >
+          <span v-else class="jd-sortable-tree-icon jd-sortable-tree-icon-leaf">
             •
           </span>
 
-          <span>{{ item.originalItem[fieldNames.label] }}</span>
+          <span class="jd-sortable-tree-node-label">{{
+            item.originalItem[fieldNames.label]
+          }}</span>
         </div>
       </slot>
     </div>

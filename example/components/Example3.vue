@@ -70,7 +70,6 @@ const handleRemoveNode = (id: string | number) => {
     <div style="height: 400px; overflow-y: auto">
       <SortableTree
         ref="treeRef"
-        class="custom-tree"
         :items="treeData"
         :indentation-width="30"
         @change="handleChange"
@@ -78,7 +77,7 @@ const handleRemoveNode = (id: string | number) => {
         @over="handleOver"
         @end="handleEnd"
       >
-        <template #default="{ item, depth, isLeaf, isExpanded, toggleExpand }">
+        <template #default="{ item, flattenedItem, depth, isLeaf, isExpanded, toggleExpand }">
           <div class="folder-item" :style="{ paddingLeft: `${depth * 30}px` }">
             <span
               v-if="!isLeaf"
@@ -95,7 +94,7 @@ const handleRemoveNode = (id: string | number) => {
             <span class="folder-name">{{ item.label }}</span>
             <button
               class="delete-btn"
-              @click.stop="handleRemoveNode(item.id)"
+              @click.stop="handleRemoveNode(flattenedItem.id)"
             >
               X
             </button>
@@ -163,11 +162,11 @@ const handleRemoveNode = (id: string | number) => {
   opacity: 1;
 }
 
-:deep(.custom-tree .vue-sortable-item.sortable-ghost) {
+:deep(.vue-sortable-item.sortable-ghost) {
   background-color: lightskyblue;
 }
 
-:deep(.custom-tree .vue-sortable-item.sortable-fallback) {
+:deep(.vue-sortable-item.sortable-fallback) {
   display: none;
 }
 </style>
