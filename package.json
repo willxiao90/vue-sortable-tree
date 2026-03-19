@@ -1,11 +1,32 @@
 {
-  "name": "vue-sortable-tree",
+  "name": "sortable-tree-vue3",
+  "author": "willxiao90",
   "private": false,
   "version": "0.1.10",
+  "license": "MIT",
+  "keywords": [
+    "vue",
+    "tree",
+    "sortable",
+    "nested",
+    "draggable",
+    "dnd",
+    "drag-n-drop",
+    "drag-and-drop",
+    "drag",
+    "drop",
+    "tree-view",
+    "tree-structure",
+    "treeview"
+  ],
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/willxiao90/sortable-tree-vue3.git"
+  },
   "type": "module",
   "files": [
-    "dist",
-    "README.md"
+    "dist"
   ],
   "main": "./dist/vue-sortable-tree.umd.cjs",
   "module": "./dist/vue-sortable-tree.js",
