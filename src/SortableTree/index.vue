@@ -204,7 +204,7 @@ defineExpose({
         :toggle-expand="() => toggleExpand(item)"
       >
         <div
-          class="jd-sortable-tree-node"
+          class="vue-sortable-tree-node"
           :style="{
             paddingLeft: `${itemDepth(item, index) * props.indentationWidth}px`,
           }"
@@ -212,15 +212,15 @@ defineExpose({
           <span
             v-if="item.hasChildren"
             :class="{
-              'jd-sortable-tree-icon': true,
-              'jd-sortable-tree-icon-expanded': isExpanded(item.id),
-              'jd-sortable-tree-icon-collapsed': !isExpanded(item.id),
+              'vue-sortable-tree-icon': true,
+              'vue-sortable-tree-icon-expanded': isExpanded(item.id),
+              'vue-sortable-tree-icon-collapsed': !isExpanded(item.id),
             }"
             @click.stop="toggleExpand(item)"
           >
             {{ isExpanded(item.id) ? "▼" : "▶" }}
           </span>
-          <span v-else class="jd-sortable-tree-icon jd-sortable-tree-icon-leaf">
+          <span v-else class="vue-sortable-tree-icon vue-sortable-tree-icon-leaf">
             •
           </span>
 

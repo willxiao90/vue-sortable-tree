@@ -19,14 +19,14 @@
   /* display: none; */
 }
 
-.jd-sortable-tree-node {
+.vue-sortable-tree-node {
   position: relative;
   display: flex;
   align-items: center;
   min-height: 40px;
 }
 
-.jd-sortable-tree-icon {
+.vue-sortable-tree-icon {
   width: 20px;
   height: 20px;
   display: inline-flex;
@@ -36,11 +36,11 @@
   cursor: pointer;
 }
 
-.jd-sortable-tree-icon-expanded,
-.jd-sortable-tree-icon-collapsed {
+.vue-sortable-tree-icon-expanded,
+.vue-sortable-tree-icon-collapsed {
   /* transition: all 0.2s ease; */
 }
 
-.jd-sortable-tree-icon-leaf {
+.vue-sortable-tree-icon-leaf {
   /* font-size: 0; */
 }

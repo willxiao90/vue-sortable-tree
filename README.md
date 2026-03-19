@@ -227,9 +227,9 @@ const isDisabled = (item: any, index: number) => {
 
 ## 全局 CSS Class
 
-- jd-sortable-item
-- jd-sortable-tree-node
-- jd-sortable-tree-icon
-- jd-sortable-tree-icon-expanded
-- jd-sortable-tree-icon-collapsed
-- jd-sortable-tree-icon-leaf
+- vue-sortable-item
+- vue-sortable-tree-node
+- vue-sortable-tree-icon
+- vue-sortable-tree-icon-expanded
+- vue-sortable-tree-icon-collapsed
+- vue-sortable-tree-icon-leaf
