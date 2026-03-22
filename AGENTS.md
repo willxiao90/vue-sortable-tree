@@ -1,4 +1,4 @@
-# AGENTS.md - vue-sortable-tree
+# AGENTS.md - sortable-tree-vue3
 
 This document provides guidelines and commands for agentic coding agents working in this repository.
 

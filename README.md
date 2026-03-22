@@ -2,7 +2,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Demo](https://img.shields.io/badge/Demo-Online-brightgreen)](https://willxiao90.github.io/sortable-tree-vue3/)
 
-# vue-sortable-tree
+# sortable-tree-vue3
 
 基于 Vue 3 + SortableJS 的高性能可拖拽树形组件，支持无限层级的树形结构。
 
@@ -22,9 +22,9 @@
 ## 安装
 
 ```bash
-pnpm add vue-sortable-tree
+pnpm add sortable-tree-vue3
 # 或
-npm install vue-sortable-tree
+npm install sortable-tree-vue3
 ```
 
 ## 基础用法
@@ -32,9 +32,9 @@ npm install vue-sortable-tree
 ```vue
 <script setup lang="ts">
 import { ref } from 'vue'
-import SortableTree from 'vue-sortable-tree'
-import 'vue-sortable-tree/style.css'
-import type { TreeItem } from 'vue-sortable-tree'
+import SortableTree from 'sortable-tree-vue3'
+import 'sortable-tree-vue3/style.css'
+import type { TreeItem } from 'sortable-tree-vue3'
 
 const treeData = ref<TreeItem[]>([
   {
@@ -129,7 +129,7 @@ interface TreeItem {
 ```vue
 <script setup lang="ts">
 import { ref } from 'vue'
-import SortableTree from 'vue-sortable-tree'
+import SortableTree from 'sortable-tree-vue3'
 
 const treeRef = ref<InstanceType<typeof SortableTree>>()
 
