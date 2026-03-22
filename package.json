@@ -42,7 +42,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
-    "preview": "vite preview"
+    "build-example": "vue-tsc --noEmit && vite build --config vite.config.example.ts",
+    "preview": "vite preview --config vite.config.example.ts"
   },
   "dependencies": {
     "sortablejs": "^1.15.7"
