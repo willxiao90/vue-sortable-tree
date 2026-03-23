@@ -1,8 +1,9 @@
 {
   "name": "sortable-tree-vue3",
+  "description": "A high-performance draggable tree component built on Vue 3 + SortableJS, supporting infinitely nested tree structures.",
   "author": "willxiao90",
   "private": false,
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "keywords": [
     "vue",
@@ -11,13 +12,9 @@
     "nested",
     "draggable",
     "dnd",
-    "drag-n-drop",
     "drag-and-drop",
-    "drag",
-    "drop",
     "tree-view",
-    "tree-structure",
-    "treeview"
+    "tree-structure"
   ],
   "homepage": "",
   "repository": {

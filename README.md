@@ -5,7 +5,7 @@
 
 基于 Vue 3 + SortableJS 的高性能可拖拽树形组件，支持无限层级的树形结构。
 
-[Live Demo](https://willxiao90.github.io/sortable-tree-vue3/)
+[View Demo](https://willxiao90.github.io/sortable-tree-vue3/)
 
 ## 特性
 
@@ -16,9 +16,6 @@
 - 🔒 支持禁用特定节点
 - 🎯 支持动态新增和删除
 - 📦 完整 TypeScript 类型支持
-
-## Demo
-[https://willxiao90.github.io/sortable-tree-vue3/](https://willxiao90.github.io/sortable-tree-vue3/)
 
 ## 安装
 
