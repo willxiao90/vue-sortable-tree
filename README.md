@@ -1,10 +1,11 @@
-[![npm](https://img.shields.io/npm/v/sortable-tree-vue3)](https://www.npmjs.com/package/sortable-tree-vue3)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Demo](https://img.shields.io/badge/Demo-Online-brightgreen)](https://willxiao90.github.io/sortable-tree-vue3/)
-
 # sortable-tree-vue3
 
+![npm](https://img.shields.io/npm/v/sortable-tree-vue3)
+![license](https://img.shields.io/npm/l/sortable-tree-vue3)
+
 基于 Vue 3 + SortableJS 的高性能可拖拽树形组件，支持无限层级的树形结构。
+
+[Live Demo](https://willxiao90.github.io/sortable-tree-vue3/)
 
 ## 特性
 
